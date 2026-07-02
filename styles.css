@@ -1735,30 +1735,8 @@ h1, h2, h3, h4 {
 
 /* Mobile Devices (768px) */
 @media (max-width: 768px) {
-    .hero {
-        padding-top: 140px;
-        padding-bottom: 80px;
-    }
-
     .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    /* Logo más pequeño para que quepa en la cabecera móvil */
-    .brand-logo-svg {
-        height: 30px !important;
-    }
-
-    .header-container {
-        padding: 14px 16px;
-    }
-
-    .container {
-        padding: 0 16px;
-    }
-
-    section {
-        padding: 64px 0;
+        font-size: 2.4rem;
     }
 
     .products-grid {
@@ -1839,7 +1817,7 @@ h1, h2, h3, h4 {
 /* Extra Small Devices (480px) */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
 
     .hero-actions {
