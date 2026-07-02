@@ -640,7 +640,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Formulate WhatsApp message in Spanish using safe Unicode escapes for emojis
-        let message = `¡Hola, Dobleeme! Quisiera encargar una impresión de varios archivos:\n\n`;
+        let message = `¡Hola, Dobleeme! (⚠️ Responde con un "Hola" o agrégame a tus contactos para poder hacer clic en el enlace de descarga de abajo)\n\n`;
+        message += `Quisiera encargar una impresión de varios archivos:\n\n`;
         message += `\u{1F4C2} *Archivos a imprimir:*\n${filesText}\n\n`;
         
         if (sessionFolderUrl) {
