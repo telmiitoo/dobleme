@@ -707,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body += `Precio estimado: ${price}\n\n`;
             body += `Confirmadme si esta correcto. Gracias.`;
 
-            const emailAddress = 'CORREO_GMAIL_AQUI';
+            const emailAddress = 'tcasu007@gmail.com';
             const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoUrl;
         });
