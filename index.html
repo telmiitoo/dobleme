@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobleeme Papelería y Copistería en Sevilla | Impresiones Online Rápidas</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Imprime tus apuntes y documentos online en Sevilla (CP 41003) sin colas. Calculadora de precios online y envío directo por WhatsApp. Material escolar y oficina.">
+    <meta name="keywords" content="papeleria Sevilla, copisteria Sevilla, imprimir apuntes Sevilla, copisteria cerca de mi, material escolar Sevilla, copisteria barata Sevilla, Dobleeme">
+    <meta name="author" content="Dobleeme Papelería">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dobleemepapeleria.es/">
+    <meta property="og:title" content="Dobleeme Papelería y Copistería en Sevilla | Impresiones Rápidas">
+    <meta property="og:description" content="Sube tus archivos, calcula el precio de tus copias y recógelas en tienda en el centro de Sevilla sin hacer colas.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon SVG (Isotipo M de Dobleeme) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%235c5e8c'/%3E%3Cpath d='M20 20 L32 20 L48 78 L64 20 L76 20 L76 80 L66 80 L66 38 L52 80 L44 80 L30 38 L30 80 L20 80 Z' fill='white'/%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header" id="main-header">
+        <div class="header-container">
+            <a href="#inicio" class="logo" id="logo-link" aria-label="Dobleeme Papelería">
+                <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 110" style="height: 42px; width: auto; display: block;">
+                    <!-- Big M -->
+                    <path d="M10 10 L24 10 L43 78 L62 10 L76 10 L76 100 L64 100 L64 32 L48 100 L38 100 L22 32 L22 100 L10 100 Z" fill="currentColor" />
+                    <!-- Vertical DOBLEEME -->
+                    <g fill="currentColor" font-family="var(--font-body)" font-size="7.5" font-weight="800" text-anchor="middle">
+                        <text x="100" y="17">D</text>
+                        <text x="100" y="27">O</text>
+                        <text x="100" y="37">B</text>
+                        <text x="100" y="47">L</text>
+                        <text x="100" y="57">E</text>
+                        <text x="100" y="67">E</text>
+                        <text x="100" y="77">M</text>
+                        <text x="100" y="87">E</text>
+                    </g>
+                    <!-- Horizontal DOBLEE -->
+                    <text x="120" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">DOBLEE</text>
+                    <!-- Sigma (Rotated M/E) -->
+                    <text x="352" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">Σ</text>
+                    <!-- Lowercase e -->
+                    <text x="394" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">e</text>
+                    <!-- Papelería -->
+                    <text x="290" y="96" font-family="var(--font-body)" font-size="19" font-weight="400" fill="currentColor" letter-spacing="3.5">Papelería</text>
+                </svg>
+            </a>
+            
+            <button class="nav-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="nav-menu" id="navigation-menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#copisteria" class="nav-link">Copistería Digital</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="https://wa.me/34640504531" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-header" id="header-whatsapp-btn">
+                    <svg viewBox="0 0 24 24" class="icon-svg"><path fill="currentColor" d="M19.05 4.91A11.905 11.905 0 0 0 10.5 1c-6.61 0-12 5.39-12 12 0 2.11.55 4.17 1.59 5.99L0 24l5.22-1.37A11.9 11.9 0 0 0 10.5 25c6.61 0 12-5.39 12-12 0-3.2-1.25-6.21-3.45-8.09zM10.5 22.8c-1.92 0-3.8-.51-5.46-1.48l-.39-.23-3.08.81.82-3-.26-.41A9.789 9.789 0 0 1 1.2 13c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.746 9.746 0 0 1 20.8 13c0 5.4-4.4 9.8-9.8 9.8zm5.37-7.36c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-1.12-.56-1.93-1.01-2.69-2.32-.2-.35.2-.33.58-1.08.06-.13.03-.25-.01-.33-.05-.08-.47-1.13-.64-1.54-.17-.4-.36-.35-.49-.35h-.42c-.15 0-.38.06-.58.28-.2.22-.77.75-.77 1.83 0 1.08.79 2.13.9 2.28.11.15 1.56 2.38 3.79 3.34.53.23.94.37 1.26.47.53.17 1.02.15 1.4.09.43-.06 1.74-.71 1.99-1.4.25-.69.25-1.28.17-1.4-.08-.12-.29-.27-.58-.42z"/></svg>
+                    <span>Enviar Archivos</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-kicker">Tu copistería y papelería de confianza en Sevilla</span>
+                <h1 id="hero-title">Imprime y Organiza tu Día en Sevilla: <span class="gradient-text">Sin Esperas y a un Clic.</span></h1>
+                <p class="hero-subtitle">Envía tus documentos online, calcula el precio al instante y recógelos listos en nuestra tienda en el centro de Sevilla (C/ San Alonso de Orozco). Tu material escolar, de oficina y copistería rápida, siempre a tiempo.</p>
+                
+                <div class="hero-actions">
+                    <a href="#copisteria" class="btn btn-primary" id="hero-primary-cta">Imprimir Documentos Ahora</a>
+                    <a href="#productos" class="btn btn-secondary" id="hero-secondary-cta">Ver Catálogo de Productos</a>
+                </div>
+                
+                <div class="hero-trust" id="hero-trust-indicator">
+                    <div class="stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="trust-text"><strong>4.6/5 estrellas en Google</strong> con más de 50 opiniones reales</span>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="hero-card-title">Dobleeme Copistería</span>
+                    </div>
+                    <div class="hero-card-body">
+                        <div class="quick-status">
+                            <span class="status-indicator online"></span>
+                            <span>Pedidos de hoy: Abierto y procesando</span>
+                        </div>
+                        <div class="quick-feature">
+                            <div class="q-icon">⚡</div>
+                            <div class="q-text">
+                                <strong>Recogida exprés</strong>
+                                <span>Evita colas y esperas innecesarias</span>
+                            </div>
+                        </div>
+                        <div class="quick-feature">
+                            <div class="q-icon">📂</div>
+                            <div class="q-text">
+                                <strong>Carga tu PDF</strong>
+                                <span>Formatos optimizados A4 / A3</span>
+                            </div>
+                        </div>
+                        <div class="quick-feature">
+                            <div class="q-icon">💬</div>
+                            <div class="q-text">
+                                <strong>Atención WhatsApp</strong>
+                                <span>Respuestas y presupuesto en minutos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copistería Digital Section -->
+    <section class="copisteria-section" id="copisteria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicio Estrella</span>
+                <h2>Impresiones Listas en 3 Simples Pasos</h2>
+                <p>Olvídate de hacer colas. Sube tus PDFs, personaliza tus copias y recógelas en tienda o haz tu pedido por WhatsApp.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Sube tus Archivos</h3>
+                    <p>Arrastra o selecciona tus documentos PDF de forma totalmente segura.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Configura tu Pedido</h3>
+                    <p>Elige el tipo de impresión: color o B/N, doble cara, tamaño y tipo de encuadernación.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Recoge Sin Colas</h3>
+                    <p>Te enviamos un mensaje cuando tu pedido esté listo para que solo pases a retirar.</p>
+                </div>
+            </div>
+            
+            <!-- Calculadora Interactiva de Copistería -->
+            <div class="calculator-container" id="price-calculator">
+                <div class="calculator-header">
+                    <h3>Calculadora de Impresión Online</h3>
+                    <p>Configura las opciones de tu documento para ver una estimación de precio inmediata.</p>
+                </div>
+                
+                <div class="calculator-grid">
+                    <!-- Formulario de Configuración -->
+                    <div class="calc-form">
+                        <!-- Drag and Drop Area -->
+                        <div class="dropzone" id="file-dropzone">
+                            <div class="dropzone-content" id="dropzone-prompt">
+                                <svg viewBox="0 0 24 24" class="dropzone-icon"><path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                                <p class="dropzone-text-main">Arrastra tus archivos aquí o <strong>haz clic para buscar</strong></p>
+                                <p class="dropzone-text-sub">Puedes subir múltiples archivos PDF de golpe</p>
+                            </div>
+                            <input type="file" id="file-input" accept=".pdf" multiple style="display: none;">
+                            
+                            <div class="files-list-container" id="files-list-container" style="display: none;">
+                                <div class="files-list" id="files-list">
+                                    <!-- Dynamic list of loaded files will be injected here -->
+                                </div>
+                                <button type="button" class="btn-add-more" id="btn-add-more">
+                                    <span>+ Añadir más PDFs</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opciones de impresión -->
+                        <div class="options-grid">
+                            <div class="form-group">
+                                <label for="num-pages">Número de Páginas</label>
+                                <div class="number-input-wrapper">
+                                    <button type="button" class="num-btn decrease" data-target="num-pages">-</button>
+                                    <input type="number" id="num-pages" min="1" value="10">
+                                    <button type="button" class="num-btn increase" data-target="num-pages">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="num-copies">Número de Copias</label>
+                                <div class="number-input-wrapper">
+                                    <button type="button" class="num-btn decrease" data-target="num-copies">-</button>
+                                    <input type="number" id="num-copies" min="1" value="1">
+                                    <button type="button" class="num-btn increase" data-target="num-copies">+</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="print-color">Color de Impresión</label>
+                                <select id="print-color">
+                                    <option value="bw">Blanco y Negro (Económico)</option>
+                                    <option value="color">Color Láser</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="print-format">Tamaño de Papel</label>
+                                <select id="print-format">
+                                    <option value="a4">A4 (Estándar)</option>
+                                    <option value="a3">A3 (Grande)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="print-sides">Caras de impresión</label>
+                                <select id="print-sides">
+                                    <option value="double">Doble cara (Recomendado/Ecológico)</option>
+                                    <option value="single">Una sola cara</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="print-binding">Acabado / Encuadernación</label>
+                                <select id="print-binding">
+                                    <option value="none">Sin encuadernación (Hojas sueltas)</option>
+                                    <option value="spiral">Encuadernación Espiral con Portas</option>
+                                    <option value="laminate">Plastificado (Por documento)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Presupuesto -->
+                    <div class="calc-summary">
+                        <h4>Resumen del Pedido</h4>
+                        <ul class="summary-details">
+                            <li><span>Hojas de impresión:</span> <strong id="summary-sheets">5</strong></li>
+                            <li><span>Formato y Color:</span> <strong id="summary-specs">A4, B/N</strong></li>
+                            <li><span>Encuadernación:</span> <strong id="summary-binding">Ninguna</strong></li>
+                            <li><span>Copias totales:</span> <strong id="summary-copies">1</strong></li>
+                        </ul>
+                        
+                        <div class="price-box">
+                            <span class="price-label">Precio Estimado</span>
+                            <div class="price-amount" id="total-price">0.50 €</div>
+                            <span class="price-disclaimer">* IVA Incluido. Confirmación final en tienda.</span>
+                        </div>
+                        
+                        <button type="button" class="btn btn-whatsapp-large" id="whatsapp-order-btn">
+                            <svg viewBox="0 0 24 24" class="icon-svg"><path fill="currentColor" d="M19.05 4.91A11.905 11.905 0 0 0 10.5 1c-6.61 0-12 5.39-12 12 0 2.11.55 4.17 1.59 5.99L0 24l5.22-1.37A11.9 11.9 0 0 0 10.5 25c6.61 0 12-5.39 12-12 0-3.2-1.25-6.21-3.45-8.09zM10.5 22.8c-1.92 0-3.8-.51-5.46-1.48l-.39-.23-3.08.81.82-3-.26-.41A9.789 9.789 0 0 1 1.2 13c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.746 9.746 0 0 1 20.8 13c0 5.4-4.4 9.8-9.8 9.8zm5.37-7.36c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-1.12-.56-1.93-1.01-2.69-2.32-.2-.35.2-.33.58-1.08.06-.13.03-.25-.01-.33-.05-.08-.47-1.13-.64-1.54-.17-.4-.36-.35-.49-.35h-.42c-.15 0-.38.06-.58.28-.2.22-.77.75-.77 1.83 0 1.08.79 2.13.9 2.28.11.15 1.56 2.38 3.79 3.34.53.23.94.37 1.26.47.53.17 1.02.15 1.4.09.43-.06 1.74-.71 1.99-1.4.25-.69.25-1.28.17-1.4-.08-.12-.29-.27-.58-.42z"/></svg>
+                            <span>Encargar Pedido por WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section class="products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestro Catálogo</span>
+                <h2>Todo lo que Necesitas para Estudiar, Trabajar y Crear</h2>
+                <p>Una cuidada selección de materiales de alta calidad para estudiantes, opositores, oficinas y amantes de la papelería bonita.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Categoría 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <div class="product-placeholder-img visual-school">
+                            <span class="p-emoji">📚</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Material Escolar</h3>
+                        <p>Prepárate para el éxito académico. Mochilas, cuadernos, bolígrafos, estuches y todo lo necesario para el nuevo curso escolar.</p>
+                        <span class="catalog-badge">Colegios e Institutos</span>
+                    </div>
+                </div>
+                
+                <!-- Categoría 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <div class="product-placeholder-img visual-office">
+                            <span class="p-emoji">📁</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Material de Oficina</h3>
+                        <p>Optimiza tu espacio de trabajo. Organizadores, archivadores, papel de alta calidad y consumibles para tu negocio o despacho en casa.</p>
+                        <span class="catalog-badge">Empresas y Autónomos</span>
+                    </div>
+                </div>
+                
+                <!-- Categoría 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <div class="product-placeholder-img visual-crafts">
+                            <span class="p-emoji">🎨</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Manualidades y Arte</h3>
+                        <p>Da vida a tus ideas más creativas. Cartulinas especiales, pinturas, pinceles, pegamentos y herramientas de corte profesionales.</p>
+                        <span class="catalog-badge">Creativos y Hobby</span>
+                    </div>
+                </div>
+                
+                <!-- Categoría 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <div class="product-placeholder-img visual-gifts">
+                            <span class="p-emoji">🎁</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Papelería Bonita y Regalos</h3>
+                        <p>Detalles que inspiran en el día a día. Agendas de diseño, planificadores semanales, bolígrafos premium y regalos originales.</p>
+                        <span class="catalog-badge">Detalles Únicos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="catalog-cta">
+                <p>¿Buscas una marca o producto específico? Pregúntanos sin compromiso por WhatsApp</p>
+                <a href="https://wa.me/34640504531?text=Hola,%20busco%20información%20sobre%20stock%20de%20un%20producto" target="_blank" class="btn btn-secondary btn-small-icon">
+                    <span>Consultar Stock Directo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios de Clientes (Google Social Proof) -->
+    <section class="reviews-section" id="opiniones">
+        <div class="reviews-bg-shapes"></div>
+        <div class="container">
+            <div class="reviews-layout">
+                <!-- Estadísticas de Calificación -->
+                <div class="reviews-info">
+                    <span class="section-tag invert">Prueba Social</span>
+                    <h2>La Confianza de Sevilla Nos Avala</h2>
+                    <p>Creemos en el comercio de proximidad con herramientas del siglo XXI. La rapidez y la amabilidad son nuestros pilares.</p>
+                    
+                    <div class="google-badge-card">
+                        <div class="badge-header">
+                            <svg viewBox="0 0 24 24" class="google-icon"><path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 10.793-4.537 10.793-10.985 0-.74-.08-1.302-.178-1.782l-10.615-.428z"/></svg>
+                            <span>Google Reviews</span>
+                        </div>
+                        <div class="badge-body">
+                            <span class="badge-rating">4.6</span>
+                            <div class="stars-badge">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <span class="badge-reviews-count">+50 opiniones reales</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carrusel de Reseñas -->
+                <div class="reviews-carousel-wrapper">
+                    <div class="carousel" id="reviews-carousel">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide active">
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <p class="review-text">"La mejor copistería de la zona. Les mando los apuntes de la oposición por WhatsApp y cuando llego ya están impresos y encuadernados. Trato insuperable."</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">MR</div>
+                                    <div class="author-details">
+                                        <strong>María R.</strong>
+                                        <span>Estudiante y Opositora</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <p class="review-text">"Muy profesionales y rápidos. El material de oficina para mi negocio siempre lo compro aquí. Da gusto tener comercios de barrio tan eficientes."</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">JG</div>
+                                    <div class="author-details">
+                                        <strong>José Manuel G.</strong>
+                                        <span>Autónomo Local</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="review-card">
+                                <div class="review-stars">★★★★★</div>
+                                <p class="review-text">"Tienen de todo, papelería super bonita y el servicio de impresión es baratísimo y con una calidad genial. Son majísimos."</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">LS</div>
+                                    <div class="author-details">
+                                        <strong>Laura S.</strong>
+                                        <span>Vecina del Barrio</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del carrusel -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn" id="prev-review" aria-label="Reseña anterior">&#8592;</button>
+                        <div class="carousel-dots" id="carousel-dots-container">
+                            <span class="dot-indicator active" data-index="0"></span>
+                            <span class="dot-indicator" data-index="1"></span>
+                            <span class="dot-indicator" data-index="2"></span>
+                        </div>
+                        <button class="carousel-btn next-btn" id="next-review" aria-label="Siguiente reseña">&#8594;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Resolvemos tus dudas</span>
+                <h2>Preguntas Frecuentes</h2>
+                <p>Todo lo que necesitas saber sobre nuestro servicio de impresión exprés y stock de papelería.</p>
+            </div>
+            
+            <div class="faq-accordion-container">
+                <!-- Pregunta 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q1">
+                        <span>¿Cómo puedo enviar mis apuntes o documentos para imprimir?</span>
+                        <span class="faq-icon-arrow">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a1">
+                        <div class="faq-answer-inner">
+                            <p>Es facilísimo. Puedes usar nuestra calculadora interactiva en esta web, subir tu archivo PDF, configurar tus opciones y hacer clic en <strong>"Encargar Pedido por WhatsApp"</strong>. Esto generará un mensaje automático con el detalle del pedido para que nos lo envíes en un clic. También puedes mandarnos un correo o venir directamente a la tienda con tu pendrive.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q2">
+                        <span>¿Cuánto tardáis en tener listo un pedido de impresión?</span>
+                        <span class="faq-icon-arrow">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a2">
+                        <div class="faq-answer-inner">
+                            <p>Para documentos y apuntes estándar, el plazo de entrega suele ser de <strong>menos de 2 horas</strong> desde la recepción y confirmación del archivo por WhatsApp. Te enviaremos un mensaje avisándote en cuanto esté encuadernado y listo para que solo tengas que entrar y recogerlo sin colas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q3">
+                        <span>¿Qué tipos de encuadernación prestigiosos ofrecéis?</span>
+                        <span class="faq-icon-arrow">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a3">
+                        <div class="faq-answer-inner">
+                            <p>Realizamos encuadernaciones clásicas con espiral de plástico y metálicas de alta resistencia, con portadas transparentes y contraportadas de cartón/plástico rígido en varios colores. También realizamos plastificados profesionales hasta tamaño A3 para proteger tus carteles, horarios o portadas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" id="faq-q4">
+                        <span>¿Hacéis envíos a domicilio o solo recogida en tienda?</span>
+                        <span class="faq-icon-arrow">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a4">
+                        <div class="faq-answer-inner">
+                            <p>Actualmente nos enfocamos exclusivamente en la <strong>recogida rápida en nuestra tienda física de Sevilla</strong> (C. San Alonso de Orozco, 6). Esto nos permite ofrecer los precios de impresión más ajustados y económicos de la zona y garantizar que tus apuntes o trabajos se entregan con la calidad exacta requerida y sin demoras de mensajería.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Section -->
+    <footer class="footer" id="contacto">
+        <div class="container footer-grid">
+            <!-- Columna 1: Info Marca -->
+            <div class="footer-col-info">
+                <a href="#inicio" class="logo footer-logo" aria-label="Dobleeme Papelería">
+                    <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 110" style="height: 42px; width: auto; display: block;">
+                        <!-- Big M -->
+                        <path d="M10 10 L24 10 L43 78 L62 10 L76 10 L76 100 L64 100 L64 32 L48 100 L38 100 L22 32 L22 100 L10 100 Z" fill="currentColor" />
+                        <!-- Vertical DOBLEEME -->
+                        <g fill="currentColor" font-family="var(--font-body)" font-size="7.5" font-weight="800" text-anchor="middle">
+                            <text x="100" y="17">D</text>
+                            <text x="100" y="27">O</text>
+                            <text x="100" y="37">B</text>
+                            <text x="100" y="47">L</text>
+                            <text x="100" y="57">E</text>
+                            <text x="100" y="67">E</text>
+                            <text x="100" y="77">M</text>
+                            <text x="100" y="87">E</text>
+                        </g>
+                        <!-- Horizontal DOBLEE -->
+                        <text x="120" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">DOBLEE</text>
+                        <!-- Sigma (Rotated M/E) -->
+                        <text x="352" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">Σ</text>
+                        <!-- Lowercase e -->
+                        <text x="394" y="70" font-family="var(--font-body)" font-size="52" font-weight="700" fill="currentColor" letter-spacing="1">e</text>
+                        <!-- Papelería -->
+                        <text x="290" y="96" font-family="var(--font-body)" font-size="19" font-weight="400" fill="currentColor" letter-spacing="3.5">Papelería</text>
+                    </svg>
+                </a>
+                <p class="footer-desc">Tu papelería y copistería local en el corazón de Sevilla. Fusionamos la cercanía del barrio con la agilidad digital para facilitarte la vida diaria.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 3a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m4.9-.9a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7C18.34 21.19 22 17.04 22 12.06c0-5.53-4.5-10.02-10-10.02z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Columna 2: Horarios e Información -->
+            <div class="footer-col-contact">
+                <h3>Contacto y Horario</h3>
+                <ul class="contact-details-list">
+                    <li>
+                        <span class="c-icon">📍</span>
+                        <span class="c-text">
+                            C. San Alonso de Orozco, 6, Loc 3, 41003 Sevilla, España
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=C.+San+Alonso+de+Orozco,+6,+Local+3,+41003+Sevilla" target="_blank" rel="noopener noreferrer" class="btn-gps-navigation">
+                                <span>📍 Cómo llegar (GPS)</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="c-icon">📞</span>
+                        <span class="c-text">Llámanos o WhatsApp:<br><a href="tel:+34640504531" class="footer-link-highlight">+34 640 50 45 31</a></span>
+                    </li>
+                    <li>
+                        <span class="c-icon">🕒</span>
+                        <span class="c-text">
+                            <strong>Lunes a Viernes:</strong><br>
+                            09:00 - 14:00 | 17:00 - 20:30<br>
+                            <strong>Sábado y Domingo:</strong> Cerrado
+                            <span id="shop-status-badge" class="shop-status-badge">Cargando estado...</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna 3: Mapa de ubicación -->
+            <div class="footer-col-map">
+                <h3>Ubicación en Sevilla</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.839818818501!2d-5.98399582352824!3d37.39345227208573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c04f90bf7c9%3A0xe54ef84c7e6c4ea2!2sC.%20San%20Alonso%20de%20Orozco%2C%206%2C%20Local%203%2C%2041003%20Sevilla!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de Dobleeme Papelería en Sevilla"
+                        id="google-maps-iframe">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra de Derechos de Autor e Información Legal -->
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p>&copy; 2026 Dobleeme Papelería. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button (Mobile Optimization) -->
+    <a href="https://wa.me/34640504531?text=Hola!%20Quiero%20hacer%20una%20consulta" class="whatsapp-floating" id="whatsapp-floating-btn" aria-label="Chatear por WhatsApp">
+        <svg viewBox="0 0 24 24" class="whatsapp-floating-icon"><path fill="currentColor" d="M19.05 4.91A11.905 11.905 0 0 0 10.5 1c-6.61 0-12 5.39-12 12 0 2.11.55 4.17 1.59 5.99L0 24l5.22-1.37A11.9 11.9 0 0 0 10.5 25c6.61 0 12-5.39 12-12 0-3.2-1.25-6.21-3.45-8.09zM10.5 22.8c-1.92 0-3.8-.51-5.46-1.48l-.39-.23-3.08.81.82-3-.26-.41A9.789 9.789 0 0 1 1.2 13c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.746 9.746 0 0 1 20.8 13c0 5.4-4.4 9.8-9.8 9.8zm5.37-7.36c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-1.12-.56-1.93-1.01-2.69-2.32-.2-.35.2-.33.58-1.08.06-.13.03-.25-.01-.33-.05-.08-.47-1.13-.64-1.54-.17-.4-.36-.35-.49-.35h-.42c-.15 0-.38.06-.58.28-.2.22-.77.75-.77 1.83 0 1.08.79 2.13.9 2.28.11.15 1.56 2.38 3.79 3.34.53.23.94.37 1.26.47.53.17 1.02.15 1.4.09.43-.06 1.74-.71 1.99-1.4.25-.69.25-1.28.17-1.4-.08-.12-.29-.27-.58-.42z"/></svg>
+    </a>
+
+    <!-- Modal Instrucciones WhatsApp -->
+    <div class="modal-overlay" id="whatsapp-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <span class="modal-title">¿Cómo enviar tus archivos?</span>
+                <button type="button" class="close-modal-btn" id="close-modal" aria-label="Cerrar modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-step">
+                    <div class="step-badge">1</div>
+                    <p>Se abrirá tu WhatsApp con el texto del pedido ya redactado.</p>
+                </div>
+                <div class="modal-step">
+                    <div class="step-badge">2</div>
+                    <p>Envía ese mensaje de texto en nuestro chat.</p>
+                </div>
+                <div class="modal-step">
+                    <div class="step-badge">3</div>
+                    <p><strong>Adjunta tus archivos PDF</strong> usando el icono de clip/documento de WhatsApp.</p>
+                </div>
+                <div class="modal-alert">
+                    ⚠️ <strong>Nota:</strong> Por seguridad de tu navegador, los archivos locales no se pueden enviar solos, pero adjuntarlos en el chat te llevará solo 5 segundos.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-whatsapp-large" id="confirm-whatsapp-btn">
+                    <span>Entendido, abrir WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
