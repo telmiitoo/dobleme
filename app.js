@@ -709,7 +709,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const emailAddress = 'tcasu007@gmail.com';
             const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoUrl;
+            const tempLink = document.createElement('a');
+            tempLink.href = mailtoUrl;
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
         });
     }
 
