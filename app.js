@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryCopies = document.getElementById('summary-copies');
     const totalPriceEl = document.getElementById('total-price');
     const whatsappOrderBtn = document.getElementById('whatsapp-order-btn');
+    const emailOrderBtn = document.getElementById('email-order-btn');
 
     // Drag & Drop Elements
     const fileDropzone = document.getElementById('file-dropzone');
@@ -660,6 +661,57 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redirect directly
         window.open(whatsappUrl, '_blank');
     });
+
+    // Email Order Action
+    if (emailOrderBtn) {
+        emailOrderBtn.addEventListener('click', () => {
+            const stillUploading = uploadedFiles.some(f => f.status === 'uploading');
+            if (stillUploading) {
+                alert('Estamos subiendo tus archivos. Por favor, espera unos segundos.');
+                return;
+            }
+
+            const pages = numPagesInput.value;
+            const copies = numCopiesInput.value;
+            const color = printColorSelect.value === 'bw' ? 'Blanco y Negro' : 'Color';
+            const format = printFormatSelect.value.toUpperCase();
+            const sides = printSidesSelect.value === 'double' ? 'Doble Cara' : 'Una sola Cara';
+            let binding = 'Sin encuadernar';
+            if (printBindingSelect.value === 'spiral') binding = 'Encuadernacion Espiral';
+            if (printBindingSelect.value === 'laminate') binding = 'Plastificado';
+            const price = totalPriceEl.textContent;
+
+            let filesText = '';
+            if (uploadedFiles.length > 0) {
+                filesText = uploadedFiles.map((f, i) => {
+                    const max = f.pagesCount || 1;
+                    const printedPages = parsePageRange(f.pageRange, max);
+                    const rangeText = f.pageRange ? ` [Rango: ${f.pageRange} (${printedPages} pags)]` : ` [Completo (${max} pags)]`;
+                    const noteText = f.note ? ` | Nota: "${f.note}"` : '';
+                    return `  ${i+1}. ${f.fileObject.name}${rangeText}${noteText}`;
+                }).join('\n');
+            } else {
+                filesText = '  - Sin archivos adjuntos (adjuntar al enviar el email)';
+            }
+
+            const subject = encodeURIComponent('Pedido de Impresion - Dobleeme Papeleria');
+            let body = `Hola, Dobleeme! Quisiera encargar una impresion:\n\n`;
+            body += `ARCHIVOS A IMPRIMIR:\n${filesText}\n\n`;
+            if (sessionFolderUrl) {
+                body += `Enlace de descarga conjunto: ${sessionFolderUrl}\n\n`;
+            }
+            body += `Total paginas: ${pages}\n`;
+            body += `Numero de copias: ${copies}\n`;
+            body += `Detalles: ${format} | ${color} | ${sides}\n`;
+            body += `Acabado: ${binding}\n`;
+            body += `Precio estimado: ${price}\n\n`;
+            body += `Confirmadme si esta correcto. Gracias.`;
+
+            const emailAddress = 'CORREO_GMAIL_AQUI';
+            const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+        });
+    }
 
 
     /* ==========================================================================
