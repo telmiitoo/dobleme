@@ -54,6 +54,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -1714,13 +1715,35 @@ h1, h2, h3, h4 {
 
 /* Mobile Devices (768px) */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.4rem;
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 80px;
     }
-    
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Logo más pequeño para que quepa en la cabecera móvil */
+    .brand-logo-svg {
+        height: 30px !important;
+    }
+
+    .header-container {
+        padding: 14px 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    section {
+        padding: 64px 0;
+    }
+
     .products-grid {
         grid-template-columns: 1fr;
-        max-width: 450px;
+        max-width: 100%;
         margin: 0 auto 40px;
     }
     
@@ -1729,15 +1752,27 @@ h1, h2, h3, h4 {
     }
     
     .calculator-header {
-        padding: 24px;
+        padding: 20px 16px;
     }
     
     .calc-form, .calc-summary {
-        padding: 24px;
+        padding: 20px 16px;
     }
     
     .options-grid {
         grid-template-columns: 1fr;
+    }
+
+    .dropzone {
+        padding: 24px 16px;
+    }
+
+    .footer-grid {
+        padding: 0;
+    }
+
+    .reviews-layout > * {
+        min-width: 0;
     }
     
     .whatsapp-floating {
@@ -1774,8 +1809,12 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Extra Small Devices */
+/* Extra Small Devices (480px) */
 @media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
     .hero-actions {
         flex-direction: column;
         width: 100%;
@@ -1783,14 +1822,44 @@ h1, h2, h3, h4 {
     
     .hero-actions .btn {
         width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-trust {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
     
     .review-card {
-        padding: 24px;
+        padding: 20px 16px;
     }
     
     .review-text {
+        font-size: 0.9rem;
+    }
+
+    .calculator-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .faq-question {
         font-size: 0.95rem;
+        padding-right: 8px;
+    }
+
+    .footer {
+        font-size: 0.85rem;
+    }
+
+    .footer-grid {
+        gap: 32px;
+    }
+
+    .modal-card {
+        margin: 12px;
+        padding: 24px 16px;
     }
 }
 
