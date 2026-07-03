@@ -172,38 +172,36 @@
             </div>
             
             <!-- Calculadora Interactiva de Copistería -->
-            <div class="calculator-container" id="price-calculator">
-                <div class="calculator-header">
-                    <h3>Calculadora de Impresión Online</h3>
-                    <p>Configura las opciones de tu documento para ver una estimación de precio inmediata.</p>
-                </div>
-                
-                <!-- Paso 1: Subida de Archivos (Ancho completo) -->
-                <div class="calculator-upload-area">
-                    <div class="dropzone" id="file-dropzone">
-                        <div class="dropzone-content" id="dropzone-prompt">
-                            <svg viewBox="0 0 24 24" class="dropzone-icon"><path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
-                            <p class="dropzone-text-main">Arrastra tus archivos aquí o <strong>haz clic para buscar</strong></p>
-                            <p class="dropzone-text-sub">Puedes subir múltiples archivos PDF de golpe</p>
-                        </div>
-                        <input type="file" id="file-input" accept=".pdf" multiple style="display: none;">
-                        
-                        <div class="files-list-container" id="files-list-container" style="display: none;">
-                            <div class="files-list" id="files-list">
-                                <!-- Dynamic list of loaded files will be injected here -->
-                            </div>
-                            <button type="button" class="btn-add-more" id="btn-add-more">
-                                <span>+ Añadir más PDFs</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="calc-shell" id="price-calculator">
 
-                <div class="calculator-grid">
-                    <!-- Formulario de Configuración -->
-                    <div class="calc-form">
-                        <!-- Opciones de impresión -->
-                        <div class="options-grid">
+                <!-- Columna Izquierda: Configuración -->
+                <div class="calc-left">
+                    <div class="calc-left-inner">
+
+                        <!-- Cabecera -->
+                        <div class="calc-left-header">
+                            <h3>Calculadora de Impresión</h3>
+                            <p>Configura tu pedido y obtén un precio estimado al instante.</p>
+                        </div>
+
+                        <!-- Zona de subida de archivos -->
+                        <div class="dropzone" id="file-dropzone">
+                            <div class="dropzone-content" id="dropzone-prompt">
+                                <svg viewBox="0 0 24 24" class="dropzone-icon"><path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                                <p class="dropzone-text-main">Arrastra tus archivos aquí o <strong>haz clic para buscar</strong></p>
+                                <p class="dropzone-text-sub">Puedes subir múltiples archivos PDF de golpe</p>
+                            </div>
+                            <input type="file" id="file-input" accept=".pdf" multiple style="display: none;">
+                            <div class="files-list-container" id="files-list-container" style="display: none;">
+                                <div class="files-list" id="files-list"></div>
+                                <button type="button" class="btn-add-more" id="btn-add-more">
+                                    <span>+ Añadir más PDFs</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opciones de impresión: 2 columnas en escritorio, 1 en móvil -->
+                        <div class="calc-options">
                             <div class="form-group">
                                 <label for="num-pages">Número de Páginas</label>
                                 <div class="number-input-wrapper">
@@ -212,7 +210,7 @@
                                     <button type="button" class="num-btn increase" data-target="num-pages">+</button>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="num-copies">Número de Copias</label>
                                 <div class="number-input-wrapper">
@@ -255,10 +253,14 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Resumen del Presupuesto -->
-                    <div class="calc-summary">
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Resumen (sticky) -->
+                <div class="calc-right">
+                    <div class="calc-right-inner">
+
                         <h4>Resumen del Pedido</h4>
                         <ul class="summary-details">
                             <li><span>Hojas de impresión:</span> <strong id="summary-sheets">5</strong></li>
@@ -266,13 +268,13 @@
                             <li><span>Encuadernación:</span> <strong id="summary-binding">Ninguna</strong></li>
                             <li><span>Copias totales:</span> <strong id="summary-copies">1</strong></li>
                         </ul>
-                        
+
                         <div class="price-box">
                             <span class="price-label">Precio Estimado</span>
                             <div class="price-amount" id="total-price">0.50 €</div>
                             <span class="price-disclaimer">* IVA Incluido. Confirmación final en tienda.</span>
                         </div>
-                        
+
                         <button type="button" class="btn btn-whatsapp-large" id="whatsapp-order-btn">
                             <svg viewBox="0 0 24 24" class="icon-svg"><path fill="currentColor" d="M19.05 4.91A11.905 11.905 0 0 0 10.5 1c-6.61 0-12 5.39-12 12 0 2.11.55 4.17 1.59 5.99L0 24l5.22-1.37A11.9 11.9 0 0 0 10.5 25c6.61 0 12-5.39 12-12 0-3.2-1.25-6.21-3.45-8.09zM10.5 22.8c-1.92 0-3.8-.51-5.46-1.48l-.39-.23-3.08.81.82-3-.26-.41A9.789 9.789 0 0 1 1.2 13c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.87A9.746 9.746 0 0 1 20.8 13c0 5.4-4.4 9.8-9.8 9.8zm5.37-7.36c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-1.12-.56-1.93-1.01-2.69-2.32-.2-.35.2-.33.58-1.08.06-.13.03-.25-.01-.33-.05-.08-.47-1.13-.64-1.54-.17-.4-.36-.35-.49-.35h-.42c-.15 0-.38.06-.58.28-.2.22-.77.75-.77 1.83 0 1.08.79 2.13.9 2.28.11.15 1.56 2.38 3.79 3.34.53.23.94.37 1.26.47.53.17 1.02.15 1.4.09.43-.06 1.74-.71 1.99-1.4.25-.69.25-1.28.17-1.4-.08-.12-.29-.27-.58-.42z"/></svg>
                             <span>Encargar por WhatsApp</span>
@@ -285,8 +287,10 @@
                                 <span>Enviar por email: <strong>impresorapapeleria@gmail.com</strong></span>
                             </a>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
