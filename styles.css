@@ -230,73 +230,73 @@ h1, h2, h3, h4 {
     box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
 }
 
-/* Recuadro de Email elegante en la calculadora */
-.email-fallback-box {
-    margin-top: 20px;
-    padding: 16px;
-    background-color: rgba(197, 160, 89, 0.05); /* Champán muy suave */
-    border: 1px dashed var(--color-secondary);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    transition: var(--transition-normal);
-}
-
-.email-fallback-box:hover {
-    background-color: rgba(197, 160, 89, 0.08);
-    border-style: solid;
-}
-
-.ef-icon-wrapper {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: rgba(197, 160, 89, 0.15);
-    color: var(--color-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.ef-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.ef-content {
+/* Alternativa de Email elegante y minimalista */
+.email-alternative {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    min-width: 0; /* Para elipsis en móviles si es necesario */
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 }
 
-.ef-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+body.dark-theme .email-alternative {
+    border-top-color: rgba(255, 255, 255, 0.06);
 }
 
-.ef-desc {
-    font-size: 0.8rem;
+.divider-text {
+    font-size: 0.72rem;
     color: var(--text-muted);
-    margin: 0;
-}
-
-.ef-email-link {
-    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     font-weight: 700;
-    color: var(--color-secondary);
-    text-decoration: underline;
-    word-break: break-all;
-    transition: var(--transition-fast);
 }
 
-.ef-email-link:hover {
-    color: var(--color-secondary-hover);
+.email-alt-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-main);
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    padding: 10px 18px;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-primary);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+body.dark-theme .email-alt-link {
+    border-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.email-alt-link:hover {
+    color: var(--color-secondary);
+    background-color: var(--bg-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.12);
+}
+
+body.dark-theme .email-alt-link:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.email-alt-link strong {
+    font-weight: 700;
+}
+
+.email-alt-icon {
+    width: 15px;
+    height: 15px;
+    color: var(--color-secondary);
+    flex-shrink: 0;
 }
 
 .icon-svg {
