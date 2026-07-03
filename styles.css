@@ -220,9 +220,9 @@ h1, h2, h3, h4 {
 .btn-whatsapp-large {
     background-color: var(--color-accent);
     color: var(--text-light);
-    width: 100%;
-    padding: 16px;
-    font-size: 1.1rem;
+    padding: 14px 20px;
+    font-size: 1rem;
+    white-space: nowrap;
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
 }
 
@@ -234,13 +234,13 @@ h1, h2, h3, h4 {
 
 /* Alternativa de Email elegante y minimalista */
 .email-alternative {
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     text-align: center;
 }
 
@@ -702,28 +702,25 @@ body.dark-theme .email-alt-link:hover {
 }
 
 /* =====================================================
-   CALCULADORA — NUEVA ARQUITECTURA SIN HUECOS
+   CALCULADORA — LAYOUT COLUMNA ÚNICA (SIN HUECOS)
    ===================================================== */
 
-/* Shell: wrapper sin fondo — cada columna es una tarjeta independiente */
+/* Contenedor principal: una sola tarjeta, sin columnas paralelas */
 .calc-shell {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-}
-
-/* Tarjeta izquierda: configuración */
-.calc-left {
-    flex: 1 1 0;
-    min-width: 0;
     background-color: var(--bg-secondary);
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Área superior: dropzone + opciones (ancho completo) */
+.calc-left {
+    padding: 36px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .calc-left-inner {
-    padding: 36px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -740,31 +737,21 @@ body.dark-theme .email-alt-link:hover {
     font-size: 0.95rem;
 }
 
-/* Tarjeta derecha: resumen — sticky e independiente */
+/* Área inferior: resumen en barra horizontal */
 .calc-right {
-    flex: 0 0 300px;
-    min-width: 260px;
     background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    position: sticky;
-    top: 110px;
-    align-self: flex-start;
+    padding: 28px 36px;
 }
 
 .calc-right-inner {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 32px;
+    align-items: center;
 }
 
 .calc-right-inner h4 {
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #e2e8f0;
+    display: none; /* El título no hace falta en la barra horizontal */
 }
 
 /* Drag and Drop zone */
@@ -980,25 +967,37 @@ body.dark-theme .email-alt-link:hover {
 }
 .num-btn:hover { background-color: rgba(226,232,240,0.9); color: var(--color-primary); }
 
-/* Summary */
-.summary-details { margin-bottom: 20px; }
+/* Summary en barra horizontal */
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
 
 .summary-details li {
-    display: flex; justify-content: space-between;
-    font-size: 0.9rem; margin-bottom: 12px; color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    white-space: nowrap;
 }
-.summary-details li strong { color: var(--color-primary); }
+.summary-details li strong { color: var(--color-primary); font-size: 0.9rem; }
 
+/* Precio: compacto para la barra */
 .price-box {
-    background-color: var(--bg-secondary);
-    border: 1px solid #e2e8f0;
-    border-radius: var(--radius-md);
-    padding: 20px; text-align: center;
-    margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    text-align: center;
+    white-space: nowrap;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
 }
-.price-label { font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
-.price-amount { font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin: 6px 0; font-family: var(--font-heading); }
-.price-disclaimer { font-size: 0.73rem; color: var(--text-muted); }
+.price-label { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; }
+.price-amount { font-size: 2rem; font-weight: 800; color: var(--color-primary); margin: 2px 0; font-family: var(--font-heading); display: block; }
+.price-disclaimer { font-size: 0.68rem; color: var(--text-muted); display: block; }
 
 
 /* ==========================================================================
@@ -1476,18 +1475,30 @@ body.dark-theme .email-alt-link:hover {
 .social-links {
     display: flex;
     gap: 12px;
+    position: relative;
+    z-index: 2;
 }
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.08);
     color: var(--text-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
 }
 .social-icon:hover {
     background-color: var(--color-secondary);
@@ -1627,20 +1638,13 @@ body.dark-theme .email-alt-link:hover {
         gap: 20px;
     }
     
-    .calc-shell {
-        flex-direction: column;
-    }
-    
     .calc-right {
-        position: static;
-        width: 100%;
-        flex: 0 0 auto;
-        min-width: 0;
+        padding: 24px 20px;
     }
     
-    .calc-left {
-        border-right: none;
-        border-bottom: 1px solid #e2e8f0;
+    .calc-right-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .calc-options {
@@ -1723,9 +1727,17 @@ body.dark-theme .email-alt-link:hover {
         border-radius: var(--radius-md);
     }
     
-    .calc-left-inner,
-    .calc-right-inner {
+    .calc-left {
         padding: 20px 16px;
+    }
+
+    .calc-right {
+        padding: 20px 16px;
+    }
+
+    .calc-right-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
     
     .calc-options {
