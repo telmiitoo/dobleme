@@ -715,14 +715,15 @@ body.dark-theme .email-alt-link:hover {
     box-shadow: var(--shadow-lg);
     border: 1px solid #e2e8f0;
     overflow: hidden;
-    background-color: var(--bg-secondary);
+    background-color: transparent; /* Sin fondo: cada columna tiene el suyo */
 }
 
-/* Columna izquierda: crece con su contenido */
+/* Columna izquierda: fondo blanco propio, crece con su contenido */
 .calc-left {
     flex: 1 1 0;
     min-width: 0;
     border-right: 1px solid #e2e8f0;
+    background-color: var(--bg-secondary);
 }
 
 .calc-left-inner {
