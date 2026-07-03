@@ -705,25 +705,21 @@ body.dark-theme .email-alt-link:hover {
    CALCULADORA — NUEVA ARQUITECTURA SIN HUECOS
    ===================================================== */
 
-/* Shell: flex row, alineado al inicio para que cada columna
-   tenga solo la altura de su propio contenido */
+/* Shell: wrapper sin fondo — cada columna es una tarjeta independiente */
 .calc-shell {
     display: flex;
     align-items: flex-start;
-    gap: 0;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid #e2e8f0;
-    overflow: hidden;
-    background-color: transparent; /* Sin fondo: cada columna tiene el suyo */
+    gap: 24px;
 }
 
-/* Columna izquierda: fondo blanco propio, crece con su contenido */
+/* Tarjeta izquierda: configuración */
 .calc-left {
     flex: 1 1 0;
     min-width: 0;
-    border-right: 1px solid #e2e8f0;
     background-color: var(--bg-secondary);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 .calc-left-inner {
@@ -744,28 +740,29 @@ body.dark-theme .email-alt-link:hover {
     font-size: 0.95rem;
 }
 
-/* Columna derecha: sticky, siempre visible, nunca mayor que la pantalla */
+/* Tarjeta derecha: resumen — sticky e independiente */
 .calc-right {
-    flex: 0 0 320px;
-    min-width: 280px;
+    flex: 0 0 300px;
+    min-width: 260px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     position: sticky;
-    top: 110px;         /* altura de la cabecera fija */
+    top: 110px;
     align-self: flex-start;
 }
 
 .calc-right-inner {
-    padding: 36px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    background-color: #f8fafc;
-    height: 100%;
 }
 
 .calc-right-inner h4 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--color-primary);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding-bottom: 12px;
     border-bottom: 2px solid #e2e8f0;
 }
