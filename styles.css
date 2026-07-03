@@ -737,21 +737,45 @@ body.dark-theme .email-alt-link:hover {
     font-size: 0.95rem;
 }
 
-/* Área inferior: resumen en barra horizontal */
+/* Área inferior: resumen en barra con precio grande + acciones */
 .calc-right {
     background-color: #f8fafc;
-    padding: 28px 36px;
+    padding: 24px 36px;
+    border-top: 1px solid #e2e8f0;
 }
 
 .calc-right-inner {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 32px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .calc-right-inner h4 {
-    display: none; /* El título no hace falta en la barra horizontal */
+    display: none;
+}
+
+.calc-summary-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.calc-summary-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+    padding-top: 20px;
+}
+
+body.dark-theme .calc-summary-bottom {
+    border-top-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Drag and Drop zone */
@@ -985,7 +1009,7 @@ body.dark-theme .email-alt-link:hover {
 }
 .summary-details li strong { color: var(--color-primary); font-size: 0.9rem; }
 
-/* Precio: compacto para la barra */
+/* Precio: grande y prominente */
 .price-box {
     text-align: center;
     white-space: nowrap;
@@ -995,9 +1019,9 @@ body.dark-theme .email-alt-link:hover {
     box-shadow: none;
     margin: 0;
 }
-.price-label { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; }
-.price-amount { font-size: 2rem; font-weight: 800; color: var(--color-primary); margin: 2px 0; font-family: var(--font-heading); display: block; }
-.price-disclaimer { font-size: 0.68rem; color: var(--text-muted); display: block; }
+.price-label { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; letter-spacing: 0.08em; }
+.price-amount { font-size: 3.2rem; font-weight: 900; color: var(--color-primary); margin: 2px 0; font-family: var(--font-heading); display: block; line-height: 1; }
+.price-disclaimer { font-size: 0.68rem; color: var(--text-muted); display: block; margin-top: 4px; }
 
 
 /* ==========================================================================
@@ -1643,8 +1667,26 @@ body.dark-theme .email-alt-link:hover {
     }
     
     .calc-right-inner {
-        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .calc-summary-top {
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
+    }
+
+    .calc-summary-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding-top: 16px;
+    }
+
+    .calc-summary-bottom .btn-whatsapp-large {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
     
     .calc-options {
@@ -1736,7 +1778,6 @@ body.dark-theme .email-alt-link:hover {
     }
 
     .calc-right-inner {
-        grid-template-columns: 1fr;
         gap: 16px;
     }
     
